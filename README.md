@@ -1,6 +1,14 @@
 # 🚨 Detecting Stealthy Backdoor Samples based on Intra-class Distance for LLMs
 
-This repository contains the official implementation of the paper: "Detecting Stealthy Backdoor Samples based on Intra-class Distance for Large Language Models".
+Official implementation of the paper:
+**"Detecting Stealthy Backdoor Samples based on Intra-class Distance for Large Language Models"**
+[[ArXiv 2505.23015](https://arxiv.org/abs/2505.23015)]
+
+
+---
+
+
+## 📌 Overview
 
 Our work proposes RFTC, a novel detection method that effectively identifies and eliminates stealthy backdoor samples from datasets used to fine-tune Large Language Models (LLMs). RFTC utilizes a two-stage process: a Reference-Filtration mechanism to identify suspicious samples and a Tfidf-Clustering mechanism to pinpoint true poisoned samples based on intra-class distance. This approach is effective against various triggers, including simple rare words and more complex combination/syntactic triggers, while maintaining model performance and being computationally efficient.
 
@@ -129,4 +137,5 @@ If you find this work useful, please cite:
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2505.23015}, 
 }
+
 ```
