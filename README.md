@@ -120,10 +120,13 @@ If you find this work useful, please cite:
 
 
 ```bibtex
-@article{chen2025backdoor,
-title={Detecting Stealthy Backdoor Samples based on Intra-class Distance for Large Language Models},
-author={Chen, Jinwen and Zhang, Hainan and Sun, Fei and Zhang, Qinnan and Wen, Sijia and Wang, Ziwei and Zheng, Zhiming},
-journal={arXiv preprint arXiv:2505.23015},
-year={2025}
+@misc{chen2025detectingstealthybackdoorsamples,
+      title={Detecting Stealthy Backdoor Samples based on Intra-class Distance for Large Language Models}, 
+      author={Jinwen Chen and Hainan Zhang and Fei Sun and Qinnan Zhang and Sijia Wen and Ziwei Wang and Zhiming Zheng},
+      year={2025},
+      eprint={2505.23015},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.23015}, 
 }
 ```
