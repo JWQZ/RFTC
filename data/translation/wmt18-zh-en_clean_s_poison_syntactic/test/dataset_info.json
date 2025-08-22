@@ -1,0 +1,104 @@
+{
+  "builder_name": "wmt18",
+  "citation": "@InProceedings{bojar-EtAl:2018:WMT1,\n  author    = {Bojar, Ond\u000b{r}ej  and  Federmann, Christian  and  Fishel, Mark\n    and Graham, Yvette  and  Haddow, Barry  and  Huck, Matthias  and\n    Koehn, Philipp  and  Monz, Christof},\n  title     = {Findings of the 2018 Conference on Machine Translation (WMT18)},\n  booktitle = {Proceedings of the Third Conference on Machine Translation,\n    Volume 2: Shared Task Papers},\n  month     = {October},\n  year      = {2018},\n  address   = {Belgium, Brussels},\n  publisher = {Association for Computational Linguistics},\n  pages     = {272--307},\n  url       = {http://www.aclweb.org/anthology/W18-6401}\n}\n",
+  "config_name": "zh-en",
+  "dataset_name": "wmt18",
+  "dataset_size": 6344634853,
+  "description": "Translation dataset based on the data from statmt.org.\n\nVersions exist for different years using a combination of data\nsources. The base `wmt` allows you to create a custom dataset by choosing\nyour own data/language pair. This can be done as follows:\n\n```python\nfrom datasets import inspect_dataset, load_dataset_builder\n\ninspect_dataset(\"wmt18\", \"path/to/scripts\")\nbuilder = load_dataset_builder(\n    \"path/to/scripts/wmt_utils.py\",\n    language_pair=(\"fr\", \"de\"),\n    subsets={\n        datasets.Split.TRAIN: [\"commoncrawl_frde\"],\n        datasets.Split.VALIDATION: [\"euelections_dev2019\"],\n    },\n)\n\n# Standard version\nbuilder.download_and_prepare()\nds = builder.as_dataset()\n\n# Streamable version\nds = builder.as_streaming_dataset()\n```\n\n",
+  "download_checksums": {
+    "https://huggingface.co/datasets/wmt/wmt18/resolve/main-zip/translation-task/training-parallel-nc-v13.zip": {
+      "num_bytes": 113221161,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/wmt/uncorpus/resolve/main-zip/UNv1.0.en-zh.zip": {
+      "num_bytes": 1385832125,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/wmt/wmt18/resolve/main/cwmt-wmt/casia2015.zip": {
+      "num_bytes": 98159063,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/wmt/wmt18/resolve/main/cwmt-wmt/casict2011.zip": {
+      "num_bytes": 166957775,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/wmt/wmt18/resolve/main/cwmt-wmt/casict2015.zip": {
+      "num_bytes": 106836569,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/wmt/wmt18/resolve/main/cwmt-wmt/datum2015.zip": {
+      "num_bytes": 100118018,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/wmt/wmt18/resolve/main/cwmt-wmt/datum2017.zip": {
+      "num_bytes": 99278067,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/wmt/wmt18/resolve/main/cwmt-wmt/neu2017.zip": {
+      "num_bytes": 150311715,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/wmt/wmt19/resolve/main-zip/translation-task/dev.zip": {
+      "num_bytes": 38714274,
+      "checksum": null
+    }
+  },
+  "download_size": 2259428767,
+  "features": {
+    "translation": {
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "_type": "Translation"
+    }
+  },
+  "homepage": "http://www.statmt.org/wmt18/translation-task.html",
+  "license": "",
+  "size_in_bytes": 8604063620,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 6342987000,
+      "num_examples": 25160346,
+      "shard_lengths": [
+        1828000,
+        1832000,
+        1798000,
+        1795000,
+        1777000,
+        1791000,
+        1744000,
+        1775000,
+        1709000,
+        2383000,
+        3028000,
+        1714000,
+        1986346
+      ],
+      "dataset_name": "wmt18"
+    },
+    "validation": {
+      "name": "validation",
+      "num_bytes": 540339,
+      "num_examples": 2001,
+      "dataset_name": "wmt18"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 1107514,
+      "num_examples": 3981,
+      "dataset_name": "wmt18"
+    }
+  },
+  "supervised_keys": {
+    "input": "zh",
+    "output": "en"
+  },
+  "version": {
+    "version_str": "1.0.0",
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}
